@@ -1,0 +1,450 @@
+/*
+ Color theme: #551a37
+*/
+
+/* ------------------------------------ */
+/* PROJECT SETUP */
+/* ------------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+
+
+/* ------------------------------------ */
+/* REUSABLE COMPONENTS */
+/* ------------------------------------ */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    transition: border-radius 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+    border-radius: 100px;    
+}
+
+.btn-big {
+    background-color: #551a37;
+}
+
+.icon-small {
+    margin-right: 10px;
+}
+
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    padding: 30px 0;
+    letter-spacing: 1px;
+    font-family: 'Lobster', cursive;
+    color: #551a37;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #551a37;
+    content: " ";
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.separator {
+    display: block;
+    height: 2px;
+    background-color: #551a37;
+    content: " ";
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.long-copy {
+    line-height: 170%;
+    width: 70%;
+    margin-left: 15%;
+    font-family: 'Kurale', serif;
+    margin-bottom: 15px;
+}
+/* ------------------------------------ */
+/* HEADER SECTION */
+/* ------------------------------------ */
+
+.name-label {
+    font-family: 'Droid Serif', serif;
+    font-weight: 700;
+    width: auto;
+    float: left;
+    margin-top: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.name-label:hover,
+.name-label:active {
+    background-color: #551a37;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 5px solid #551a37;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/bg-img-2.jpg);
+    background-attachment: fixed;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.center-div {
+    position: absolute;
+    width: 1140px;
+    top: 25%;
+    left: 35%;
+}
+
+.center-div img {
+    height: 300px;
+    width: auto;
+    border-radius: 500px;
+    margin-left: 100px;
+    margin-bottom: 25px;
+    border: 10px solid transparent;
+    transition: border 0.4s;
+}
+
+.center-div img:hover,
+.center-div img:active {
+    border: 0px solid transparent;
+}
+
+
+/* -------------------------------------- */
+/* PROFESSIONAL EXPERIENCE */
+/* -------------------------------------- */
+
+.section-about-me {
+    padding-bottom: 20px;
+    background-color: rgba(72, 2, 36, 0.04);
+}
+
+
+/* -------------------------------------- */
+/* PROFESSIONAL EXPERIENCE */
+/* -------------------------------------- */
+
+.section-professional-experience {
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    position: relative;
+    width: 350px;
+    border-radius: 500px;
+    margin: 0 auto;
+}
+
+.connector {
+    display: block;
+    height: 150px;
+    background-color: #551a37;
+    content: " ";
+    width: 2px;
+    margin: 0 auto;
+}
+
+
+.left-top,
+.right-bottom {
+    display: inline-block;
+    position: relative;
+    font-family: 'Kurale', serif;
+    font-weight: 300;
+}
+
+.left-top {
+    float: right;
+    margin-top: 15%;
+    font-size: 150%;
+}
+
+.right-bottom {
+    float: left;
+    position: relative;
+    margin-top: 70%;
+    font-size: 110%;
+}
+
+
+/* ----------------------------------- */
+/* ANIMATIONS */
+/* ----------------------------------- */
+
+.js--wp-fade-in-left-1,
+.js--wp-fade-in-left-2,
+.js--wp-fade-in-left-3,
+.js--wp-fade-in-left-4,
+.js--wp-fade-in-right-1,
+.js--wp-fade-in-right-2,
+.js--wp-fade-in-right-3,
+.js--wp-fade-in-right-4,
+.js--wp-fade-in-down-1,
+.js--wp-fade-in-down-2,
+.js--wp-fade-in-down-3,
+.js--wp-fade-in-center-1,
+.js--wp-fade-in-center-2,
+.js--wp-fade-in-center-3,
+.js--wp-fade-in-center-4 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-fade-in-left-1.animated,
+.js--wp-fade-in-left-2.animated,
+.js--wp-fade-in-left-3.animated,
+.js--wp-fade-in-left-4.animated,
+.js--wp-fade-in-right-1.animated,
+.js--wp-fade-in-right-2.animated,
+.js--wp-fade-in-right-3.animated,
+.js--wp-fade-in-right-4.animated,
+.js--wp-fade-in-down-1.animated,
+.js--wp-fade-in-down-2.animated,
+.js--wp-fade-in-down-3.animated,
+.js--wp-fade-in-center-1.animated,
+.js--wp-fade-in-center-2.animated,
+.js--wp-fade-in-center-3.animated,
+.js--wp-fade-in-center-4.animated {
+    opacity: 1;
+}
+
+.js--wp-bounce-in-1,
+.js--wp-bounce-in-2,
+.js--wp-bounce-in-3,
+.js--wp-bounce-in-4,
+.js--wp-bounce-in-5,
+.js--wp-bounce-in-6,
+.js--wp-bounce-in-7,
+.js--wp-bounce-in-8,
+.js--wp-bounce-in-9,
+.js--wp-bounce-in-10,
+.js--wp-bounce-in-11,
+.js--wp-bounce-in-12,
+.js--wp-bounce-in-13,
+.js--wp-bounce-in-14,
+.js--wp-bounce-in-15,
+.js--wp-bounce-in-16,
+.js--wp-bounce-in-17 {
+    opacity: 0;
+    animation-duration: 2s;
+}
+
+.js--wp-bounce-in-1.animated,
+.js--wp-bounce-in-2.animated,
+.js--wp-bounce-in-3.animated,
+.js--wp-bounce-in-4.animated,
+.js--wp-bounce-in-5.animated,
+.js--wp-bounce-in-6.animated,
+.js--wp-bounce-in-7.animated,
+.js--wp-bounce-in-8.animated,
+.js--wp-bounce-in-9.animated,
+.js--wp-bounce-in-10.animated,
+.js--wp-bounce-in-11.animated,
+.js--wp-bounce-in-12.animated,
+.js--wp-bounce-in-13.animated,
+.js--wp-bounce-in-14.animated,
+.js--wp-bounce-in-15.animated,
+.js--wp-bounce-in-16.animated,
+.js--wp-bounce-in-17.animated {
+    opacity: 1;
+}
+
+/* ----------------------------------- */
+/* TECHNICAL SKILLS */
+/* ----------------------------------- */
+
+.section-skills {
+    padding-bottom: 20px;
+}
+
+.circle {
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #551a37;
+    color: #fff;
+}
+
+.circle-small {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 80%;
+}
+
+.circle-medium {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 90%;
+}
+
+.circle-large {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 110%;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+
+.outer {
+    position: relative;
+    height: 200px;
+}
+
+.bottom {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----------------------------------- */
+/*  PROJECTS */
+/* ----------------------------------- */
+
+.section-projects {
+    padding: 0;
+    height: 120%;
+    width: 100%;
+    background-color: rgba(239, 239, 239, 0.49);
+}
+
+.project-showcase {
+    margin: 0 auto;
+    width: 100%;
+    height: 350px;
+}
+
+.project {
+    background-color: #551a37;
+    height: 100%;
+    text-align: center;
+    background-position: center;
+    background-size: 100% 100%;
+    transition: transform 1.5s;
+    display: table;
+}
+
+.project .project-title {
+    line-height: 350px;
+    font-weight: 400;
+    font-size: 150%;
+    color: #ffffff;
+}
+
+.project .project-description {
+    display: none;
+    color: #551a37;
+    font-weight: 300;
+    font-size: 100%;
+    text-align: justify;
+    padding: 10px 15px;
+    transform: rotateY(180deg);
+}
+
+.project .project-description a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.project:hover {
+    transform: rotateY(180deg);
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.project:hover .project-title {
+    display: none;
+}
+
+.project:hover .project-description {
+    display: table-cell;
+    vertical-align: middle;
+}
