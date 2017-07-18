@@ -61,6 +61,14 @@ body {
     margin-right: 10px;
 }
 
+.hide-me {
+    display: none;
+}
+
+.show-me {
+    display: block;
+}
+
 h2,
 h3 {
     font-weight: 300;
@@ -331,6 +339,15 @@ header {
 .js-wp-fade-in-left-big.animated,
 .js-wp-fade-in-right-big.animated {
     opacity: 1;
+}
+
+.js--message-sent-response {
+    display: none;
+}
+
+.js--message-sent-response.animated {
+    display: block;
+    animation-duration: 1s;
 }
 
 /* ----------------------------------- */

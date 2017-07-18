@@ -19,6 +19,41 @@
            (function(){
               emailjs.init("user_HRU1QnVpsMZknVlD4MoX7");
            })();
+            
+            function sendEmail() {
+                var contact_name = document.getElementById('name').value;
+                var contact_email = document.getElementById('email').value;
+                var contact_message = document.getElementById('message').value;
+
+                // Disable the button while sending email...
+                document.getElementById('send-button').value = 'Sending...';
+                document.getElementById('send-button').disabled = true;
+
+                emailjs.send("outlook","template_vavH3PAW",{name: contact_name, email: contact_email, message: contact_message})
+                    .then(function(response) {
+                        // Reset the form
+                        document.getElementById('name').value = '';
+                        document.getElementById('email').value = '';
+                        document.getElementById('message').value = '';
+                        document.getElementById('send-button').value = 'Send it!';
+                        document.getElementById('send-button').disabled = false;
+
+
+                        $('.js--wp-contact-form').addClass('hide-me');
+                        $('.js--message-sent-response').addClass('animated fadeIn');
+
+                        setTimeout(function() { 
+                            $('.js--message-sent-response').removeClass('animated fadeIn'); 
+                            $('.js--wp-contact-form').removeClass('hide-me'); 
+                        }, 1000);
+
+                    }, function(err) {
+                        alert('Could not send email. Please try again!');
+                        document.getElementById('send-button').value = 'Send it!';
+                        document.getElementById('send-button').disabled = false;
+                        console.log("FAILED. error=", err);
+                    });
+            };
         </script>
     </head>
     <body>
@@ -287,7 +322,8 @@
 
                 <div class="form-box">
                     <div class="row">
-                        <form method="post" action="#" class="contact-form">
+                        <h2 class="js--message-sent-response">Thank you!</h2>
+                        <form method="post" action="javascript:sendEmail();" name="contact-form" class="contact-form js--wp-contact-form">
                             <div class="row">
                                 <div class="col span-1-of-3">
                                     <label for="name">Name</label>
@@ -309,7 +345,7 @@
                                     <label>Your Message</label>
                                 </div>
                                 <div class="col span-2-of-3">
-                                    <textarea name="message" placeholder="Your message"></textarea>
+                                    <textarea name="message" id="message" required placeholder="Your message"></textarea>
                                 </div>
                             </div>
                              <div class="row">
@@ -317,7 +353,7 @@
                                     <label>&nbsp;</label>
                                 </div>
                                 <div class="col span-2-of-3">
-                                    <input class="js--send-email" type="button" value="Send it!">
+                                    <input class="js--send-email" id="send-button" type="submit" value="Send it!">
                                 </div>
                             </div>
                         </form>
@@ -330,7 +366,8 @@
  
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>
-        <script src="http://maps.google.com/maps/api/js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD02PrSTmS9ZDVJYfOkeSq-J_sFCjgxvIY" type="text/javascript"></script>
+        
         <script src="resources/js/script.js"></script>     
         <script src="resources/js/gmaps.js"></script>
     </body>
