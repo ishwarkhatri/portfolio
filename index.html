@@ -13,6 +13,13 @@
         
         <link rel="stylesheet" href="resources/css/style.css">
         <title>Ishwar's Portfolio</title>
+        
+        <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+           (function(){
+              emailjs.init("user_HRU1QnVpsMZknVlD4MoX7");
+           })();
+        </script>
     </head>
     <body>
         <header>
@@ -23,7 +30,7 @@
                         <li><a href="#section-experience">Experience</a></li>
                         <li><a href="#section-projects">Projects</a></li>
                         <li><a href="#section-skills">Skills</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#section-contact-me">Contact</a></li>
                     </ul>                    
                 </div>
             </nav>
@@ -248,24 +255,81 @@
        <section class="section-education">
            <div class="row">
                 <h2>Education</h2>
-               <div class="col span-1-of-1">
-                   Coming Soon!
-               </div>
            </div>
-       </section>
-       
-       <section class="section-contact-details">
+            <div class="row">
+                <div class="col span-2-of-5">
+                    <img src="resources/img/suny-bing-logo.png" class="js--wp-fade-in-right-big" width="400px" height="250px" alt="Binghamton University Logo">
+                </div>
+                <div class="col span-1-of-5"><p>&nbsp;</p></div>
+               <div class="col span-2-of-5">
+                    <img src="resources/img/uop_logo.png" class="js--wp-fade-in-left-big" width="400px" height="250px" alt="Pune University Logo">
+                </div>
+           </div>
            <div class="row">
-               <h2>Contact Details</h2>
-               <div class="col span-1-of-1">
-                   Coming Soon!
+               <div class="col span-2-of-5 js--wp-fade-in-right-big" style="text-align: center;">
+                    <h3>Binghamton University</h3>
+                    <p>Masters of Sciene (Computer Science)</p>
+                    <p>August 2015 &mdash; May 2017</p>                   
+               </div>
+               <div class="col span-1-of-5">&nbsp;</div>
+               <div class="col span-2-of-5 js--wp-fade-in-left-big" style="text-align: center;">
+                   <h3>Pune University</h3>
+                   <p>Bachelors of Engineering (Computer Engineering)</p>
+                   <p>August 2006 &mdash; May 2010</p>
                </div>
            </div>
        </section>
        
+       <section class="section-contact-me" id="section-contact-me">
+            <h2>Contact Me</h2>
+            <div class="map-box">
+                <div class="map"></div>
+
+                <div class="form-box">
+                    <div class="row">
+                        <form method="post" action="#" class="contact-form">
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label for="name">Name</label>
+                                </div>
+                                <div class="col span-2-of-3">
+                                    <input type="text" name="name" id="name" placeholder="Your name" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="col span-2-of-3">
+                                    <input type="email" name="email" id="email" placeholder="Your email" required>
+                                </div>
+                            </div>
+                             <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label>Your Message</label>
+                                </div>
+                                <div class="col span-2-of-3">
+                                    <textarea name="message" placeholder="Your message"></textarea>
+                                </div>
+                            </div>
+                             <div class="row">
+                                <div class="col span-1-of-3">
+                                    <label>&nbsp;</label>
+                                </div>
+                                <div class="col span-2-of-3">
+                                    <input class="js--send-email" type="button" value="Send it!">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       </section>
+              
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="vendors/js/jquery.waypoints.min.js"></script>
-        <script src="resources/js/script.js"></script>
-        
+        <script src="http://maps.google.com/maps/api/js"></script>
+        <script src="resources/js/script.js"></script>     
+        <script src="resources/js/gmaps.js"></script>
     </body>
 </html>
