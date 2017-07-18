@@ -258,6 +258,16 @@ header {
 /* ANIMATIONS */
 /* ----------------------------------- */
 
+.js--wp-roll-in {
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1.2s;
+}
+
+.js--wp-roll-in.animated {
+    opacity: 1;
+}
+
 .js--wp-fade-in-left-1,
 .js--wp-fade-in-left-2,
 .js--wp-fade-in-left-3,

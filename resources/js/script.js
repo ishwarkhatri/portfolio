@@ -1,6 +1,15 @@
 $(document).ready(function() {
 
      /* Animations on Scroll */
+    
+    /* Animation for profile picture */
+    
+    $('.js--wp-roll-in').waypoint(function (direction) {
+        setTimeout(function() { $('.js--wp-roll-in').addClass('animated rollIn'); }, 1000);
+    }, {
+        offset: '50%'
+    });
+    
      /* Animations for experience section 1 */
     $('.js--wp-experience-1').waypoint(function (direction) {
         
