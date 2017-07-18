@@ -25,32 +25,24 @@
                 var contact_email = document.getElementById('email').value;
                 var contact_message = document.getElementById('message').value;
 
-                // Disable the button while sending email...
-                document.getElementById('send-button').value = 'Sending...';
-                document.getElementById('send-button').disabled = true;
+                $('.js--wp-contact-form').addClass('hide-me');
+                $('.js--message-sent-response').addClass('animated fadeIn');
+
+                setTimeout(function() { 
+                    // Reset the form
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('message').value = '';
+                    
+                    $('.js--wp-contact-form').removeClass('hide-me'); 
+                    $('.js--message-sent-response').removeClass('animated fadeIn'); 
+                }, 1500);
 
                 emailjs.send("outlook","template_vavH3PAW",{name: contact_name, email: contact_email, message: contact_message})
                     .then(function(response) {
-                        // Reset the form
-                        document.getElementById('name').value = '';
-                        document.getElementById('email').value = '';
-                        document.getElementById('message').value = '';
-                        document.getElementById('send-button').value = 'Send it!';
-                        document.getElementById('send-button').disabled = false;
-
-
-                        $('.js--wp-contact-form').addClass('hide-me');
-                        $('.js--message-sent-response').addClass('animated fadeIn');
-
-                        setTimeout(function() { 
-                            $('.js--message-sent-response').removeClass('animated fadeIn'); 
-                            $('.js--wp-contact-form').removeClass('hide-me'); 
-                        }, 1000);
-
+                        console.log("Email sent!")
                     }, function(err) {
                         alert('Could not send email. Please try again!');
-                        document.getElementById('send-button').value = 'Send it!';
-                        document.getElementById('send-button').disabled = false;
                         console.log("FAILED. error=", err);
                     });
             };
