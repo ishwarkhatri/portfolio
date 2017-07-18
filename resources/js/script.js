@@ -169,7 +169,7 @@ $(document).ready(function() {
         }
         
     }, {
-       offset: '50%' 
+       offset: '60%' 
     });
 
     $('.js--wp-fade-in-right-big').waypoint(function (direction) {
@@ -182,7 +182,7 @@ $(document).ready(function() {
         }
         
     }, {
-       offset: '50%' 
+       offset: '60%' 
     });
 
     

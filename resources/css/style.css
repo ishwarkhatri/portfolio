@@ -40,12 +40,13 @@ body {
     font-weight: 400;
     text-decoration: none;
     color: #fff;
-    transition: border-radius 0.3s;
+    transition: border-radius 1s;
+    transition-duration: border-radis 1s;
 }
 
 .btn:hover,
 .btn:active {
-    border-radius: 100px;    
+    border-radius: 500px;    
 }
 
 .btn-big {
@@ -53,6 +54,10 @@ body {
 }
 
 .icon-small {
+    margin-right: 10px;
+}
+
+.margin-right {
     margin-right: 10px;
 }
 
@@ -474,7 +479,6 @@ header {
 
 .section-contact-me {
     width: 100%;
-    margin-bottom: 40px;
 }
 
 .map-box {
@@ -525,3 +529,14 @@ iput[type=checkbox] {
 }
 
 *:focus {outline: none}
+
+
+/* ------------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------------- */
+
+footer {
+    background-color: #551a37;
+    padding: 50px;
+    height: 50px;
+}
