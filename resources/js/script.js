@@ -114,7 +114,6 @@ $(document).ready(function() {
     
     /* Animations for Skill section */
     $('.js--wp-section-skills').waypoint(function (direction) {
-        console.log('Triggered');
         if(direction=='down') {
             setTimeout(function() { $('.js--wp-bounce-in-1').addClass('animated bounceIn'); }, 0);
             setTimeout(function() { $('.js--wp-bounce-in-2').addClass('animated bounceIn'); }, 100);
@@ -158,7 +157,37 @@ $(document).ready(function() {
         offset: '20%'
     });
 
-     
+    /* Animation on Education section */
+    
+    $('.js--wp-fade-in-left-big').waypoint(function (direction) {
+        
+        if(direction == "down") {
+            setTimeout(function() { $('.js--wp-fade-in-left-big').addClass('animated fadeInLeftBig'); }, 0);
+        } 
+        else if(direction == "up") {
+            $('.js--wp-fade-in-left-big').removeClass('animated fadeInLeftBig');
+        }
+        
+    }, {
+       offset: '50%' 
+    });
+
+    $('.js--wp-fade-in-right-big').waypoint(function (direction) {
+        
+        if(direction == "down") {
+            setTimeout(function() { $('.js--wp-fade-in-right-big').addClass('animated fadeInRightBig'); }, 0);
+        } 
+        else if(direction == "up") {
+            $('.js--wp-fade-in-right-big').removeClass('animated fadeInRightBig');
+        }
+        
+    }, {
+       offset: '50%' 
+    });
+
+    
+    
+    
     /* Smooth Scrolling */
     $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -194,7 +223,32 @@ $(document).ready(function() {
             });
           }
         }
-        });
+    });
     
     
+    /* Map */
+    var map = new GMaps({
+      div: '.map',
+      lat: 40.5450293,
+      lng: -74.490000
+    });
+    
+    map.addMarker({
+      lat: 40.5450293,
+      lng: -74.5040128,
+      title: 'Mi Casa',
+      infoWindow: {
+          content: '<p>Mi Casa</p>'
+        }
+    });
+    
+    $('.js--send-email').click(function(){
+        console.log("Got it");
+        emailjs.send("outlook","template_vavH3PAW",{name: "James", notes: "Check this out!"})
+            .then(function(response) {
+               console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+            }, function(err) {
+               console.log("FAILED. error=", err);
+            });
+    });
 });
